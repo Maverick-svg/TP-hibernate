@@ -18,13 +18,13 @@ import fr.adaming.model.Formation;
  * Servlet implementation class ListeServlet
  */
 @WebServlet("/ListeServlet")
-public class ListeServlet extends HttpServlet {
+public class ListeFormationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ListeServlet() {
+    public ListeFormationServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -37,16 +37,18 @@ public class ListeServlet extends HttpServlet {
 		IFormationDAO dao = new FormationDAO();
 		list=dao.getFormation();
 		request.setAttribute("formation", list);
-		this.getServletContext().getRequestDispatcher("/WEB-INF/VueListe.jsp").forward(request, response);
+		this.getServletContext().getRequestDispatcher("/WEB-INF/ListeFormation.jsp").forward(request, response);
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	
 		
 		this.getServletContext().getRequestDispatcher("/WEB-INF/VueListe.jsp").forward(request, response);
+		
+		
 	}
 
 }

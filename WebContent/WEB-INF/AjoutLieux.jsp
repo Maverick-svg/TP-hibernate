@@ -1,19 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="utf-8"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 <style type="text/css"><%@ include file="bootstrap.min.css" %></style>
-<title>Insert title here</title>
+<title>Ajout Formation</title>
 </head>
 <body>
 <%@ include file="BarreMenu.jsp" %>
-<h2>ici la liste</h2>
-<c:forEach items="${formation}" var="formation"></c:forEach>
-<h3>ID Formation : ${formation.id}</h3>
-<h3>Thème Formation : ${formation.theme}</h3>
+
+<h2>Ajout de la nouvelle formation</h2>
+<form action="/FormationHibernate/AjoutServlet" method="post">
+<input type="text" name="ville" placeholder="EntÃ©e le nom de la ville">
+<
+<input type="submit" value="submit">
+
+</form>
 
 
 </body>

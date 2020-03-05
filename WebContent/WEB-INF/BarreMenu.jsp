@@ -21,6 +21,12 @@
       <li class="nav-item">
         <a class="nav-link" href="/FormationHibernate/ListeServlet">Liste formation</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/FormationHibernate/AjoutLieuServlet">Ajouter Lieu</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/FormationHibernate/LissLieuxServlet">lister Lieu</a>
+      </li>
     </ul>
   </div>
 </nav>

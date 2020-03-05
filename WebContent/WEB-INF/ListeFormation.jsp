@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+    pageEncoding="ISO-8859-1"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
@@ -11,14 +11,14 @@
 <body>
 <%@ include file="BarreMenu.jsp" %>
 
-<h2>Ici l'ajout</h2>
-<form action="/FormationHibernate/AjoutServlet" method="post">
-<input type="text" name="Theme" placeholder="chosir thÃ¨me de la formation">
+<h2> liste complète Des formations</h2>
+<select>
 
-<input type="button" value="submit">
-
-</form>
-
-
+<c:forEach items="${formation}" var="formation">
+<h3>${formation.IdFormation }</h3>
+<h3>${formation.theme }</h3>
+<h3>${formation.lieu }</h3>
+</c:forEach>
+</select>
 </body>
 </html>

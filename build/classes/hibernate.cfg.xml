@@ -7,15 +7,15 @@
               
       <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
               
-      <property name="connection.url">jdbc:mysql://localhost:3306/Formation?createDatabaseIfNotExist=true</property>
+      <property name="connection.url">jdbc:mysql://localhost:3306/GestionFormation?createDatabaseIfNotExist=true</property>
               
       <property name="connection.username">root</property>
       <property name="show_sql">true</property>           
       <property name="connection.password"></property>
       <property name = "hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>        
       <property name="hbm2ddl.auto">update</property>
-       <mapping class="fr.adaming.model.Formation"/>
-      
+      <mapping class="fr.adaming.model.Lieu"/>
+      <mapping class="fr.adaming.model.Formation"/>
           
    </session-factory>
 </hibernate-configuration>
